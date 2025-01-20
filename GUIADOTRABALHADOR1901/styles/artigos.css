@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Deve ser igual à largura para manter o círculo */
+    background-color: #B92020;
+    border-bottom-right-radius: 100%; /* Forma 1/4 do círculo */
+}
+
+body{
+    padding: 0 100px; /* Aplica padding apenas nas laterais (esquerda e direita) */
+    padding: 0 100px; /* Ajusta o espaçamento interno */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+.logo-artigos{
+
+    width: 400px;
+}
+
+/* Adicionando estilo para os links dentro dos itens */
+.item-link {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;         /* Herda a cor do texto do item */
+    display: block;         /* Faz com que o link ocupe todo o espaço do card */
+}
+
+/* Efeito de hover no card (para simular interatividade) */
+.item-link:hover {
+    opacity: 0.8;  /* Reduz a opacidade ao passar o mouse */
+}
+
+
+.container-artigos{
+    max-width: 1400px;
+    padding: 3%;
+    margin: 0 auto;
+    padding-top: 100px; /* Adiciona espaço no topo */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(0, 0, 0); /* Linha na parte inferior */
+    padding-bottom: 50px; /* Espaço entre o conteúdo e a linha */
+}
+
+nav .logo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.6s;
+    font-family: Outfit;
+}
+
+nav ul li a:hover{
+    color: rgb(102, 7, 7)
+}
+
+
+.titulo1-artigos h2{
+    font-family: Oswald;
+    font-size: 40px;
+    font-weight: 450;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    
+}
+
+
+/*CARROSSEL*/
+
+/* Seção vermelha mantém a largura total da tela */
+.carrossel-artigos1 {
+    background-color: #B92020;
+    color: #fff;
+    padding: 50px 0;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    margin-left: calc(-50vw + 50%); /* Alinha com o restante do layout */
+}
+
+/* Título da seção */
+.titulo-secao {
+    font-family: 'Oswald';
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: left; /* Mantém o alinhamento à esquerda */
+    padding-left: 170px; /* Ajusta o alinhamento ao restante do conteúdo */
+}
+
+/* Contêiner do carrossel */
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Certifica-se de centralizar o carrossel */
+    overflow: hidden; /* Garante que os itens excedentes não fiquem visíveis */
+    max-width: 1200px; /* Ajusta a largura máxima */
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+/* Carrossel */
+.carrossel {
+    display: flex;
+    gap: 20px; /* Mantém espaço entre os itens */
+    transition: transform 0.5s ease-in-out;
+    width: max-content; /* Evita que o conteúdo ultrapasse os limites */
+    padding-left: 0; /* Remove o deslocamento inicial */
+}
+
+/* Itens do carrossel */
+.carrossel .item {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    width: 280px; /* Largura fixa dos cards */
+    height: 350px; /* Altura fixa para padronizar */
+    text-align: left;
+    display: flex; /* Permite alinhar o conteúdo */
+    flex-direction: column; /* Ordena verticalmente */
+    justify-content: space-between; /* Espaça o conteúdo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para animações de escala e sombra */
+}
+
+/* Efeito de hover no item (expansão e sombra) */
+.carrossel .item:hover {
+    transform: scale(1.05);  /* Expande o item em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Adiciona uma sombra suave para dar destaque */
+}
+
+/* Estilo da imagem dentro dos itens */
+.carrossel .item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    height: 150px; /* Tamanho fixo para a imagem */
+    object-fit: cover; /* Corta a imagem mantendo a proporção */
+}
+
+/* Título do item */
+.carrossel .item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Descrição do item */
+.carrossel .item p {
+    font-size: 14px;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 0px;
+    overflow: hidden; /* Esconde texto que ultrapassa */
+    text-overflow: ellipsis; /* Adiciona "..." para texto longo */
+    display: -webkit-box; /* Combinação para truncar texto */
+    -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
+    -webkit-box-orient: vertical;
+}
+
+
+
+
+/* Botões de seta */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    border: none;
+    width: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 5; /* Garante que as setas fiquem sempre visíveis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Destaque visual */
+}
+
+.seta-esquerda {
+    left: -1px; /* Ajusta a posição para o lado esquerdo do container */
+}
+
+.seta-direita {
+    right: -1px; /* Ajusta a posição para o lado direito do container */
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.fundo-vermelho {
+    background-color: #B92020;
+    padding: 20px;
+    
+}
+
+.fundo-branco {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Rodapé */
+footer {
+    background-color: #fd0e0e;
+    color: white;
+    padding: 20px 0;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    margin-left: calc(-50vw + 50%); /* Alinha com o restante do layout */
+    
+}
+
+.container-footer {
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Outfit", serif;
+    
+}
+
+.siga-nos, .suporte, .sobre-nos {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.siga-nos h3, .suporte h3, .sobre-nos h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    font-family: "Outfit", serif;
+}
+

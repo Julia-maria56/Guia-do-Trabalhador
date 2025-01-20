@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/* Menu */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Deve ser igual à largura para manter o círculo */
+    background-color: rgb(102, 7, 7); /* Cor vermelho escuro */
+    border-bottom-right-radius: 100%; /* Forma 1/4 do círculo */
+}
+
+body{
+    padding: 0 100px; /* Aplica padding apenas nas laterais (esquerda e direita) */
+    padding: 0 100px; /* Ajusta o espaçamento interno */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+.logo-artigos{
+
+    width: 400px;
+}
+
+/* Adicionando estilo para os links dentro dos itens */
+.item-link {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;         /* Herda a cor do texto do item */
+    display: block;         /* Faz com que o link ocupe todo o espaço do card */
+}
+
+/* Efeito de hover no card (para simular interatividade) */
+.item-link:hover {
+    opacity: 0.8;  /* Reduz a opacidade ao passar o mouse */
+}
+
+
+.container-artigos{
+    max-width: 1400px;
+    padding: 3%;
+    margin: 0 auto;
+    padding-top: 100px; /* Adiciona espaço no topo */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(0, 0, 0); /* Linha na parte inferior */
+    padding-bottom: 50px; /* Espaço entre o conteúdo e a linha */
+}
+
+nav .logo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.6s;
+    font-family: Outfit;
+}
+
+nav ul li a:hover{
+    color: rgb(102, 7, 7)
+}
+/* fim Menu */
+
+#noticia{
+    margin-left:30px;
+    display: flex;
+    flex-direction: column;
+}
+#titulo-noticia{
+    font-family: 'Oswald', sans-serif;
+    font-weight:600;
+    font-size:50px;
+}
+
+#subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:25px;
+    margin-top:30px;
+}
+
+.dataehora{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:30px;
+    font-size:20px;
+}
+
+#negrito{
+    font-weight: bold;
+}
+
+#foto-noticia {
+    margin-top: 50px;
+    width: 80%;
+    margin-left: auto; /* Remove a margem fixa */
+    margin-right: auto; /* Centraliza horizontalmente */
+    display: block; /* Necessário para centralização com margin auto */
+}
+
+#conteudo p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 450;
+    margin-top:50px;
+    padding-bottom: 3px;
+    margin-bottom: 50px; /* Espaço entre os parágrafos */
+    text-indent: 25px; /* Altere o valor conforme o necessário */
+    text-align:justify;
+}
+
+/* Rodapé */
+footer {
+    background-color: #fd0e0e;
+    color: white;
+    padding: 20px 0;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    margin-left: calc(-50vw + 50%); /* Alinha com o restante do layout */
+    
+}
+
+.container-footer {
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Outfit", serif;
+    
+}
+
+.siga-nos, .suporte, .sobre-nos {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.siga-nos h3, .suporte h3, .sobre-nos h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    font-family: "Outfit", serif;
+}
+
