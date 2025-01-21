@@ -1,0 +1,827 @@
+
+@import url('/css/scriptfaq.css');
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Deve ser igual à largura para manter o círculo */
+    background-color: rgb(102, 7, 7); /* Cor vermelho escuro */
+    border-bottom-right-radius: 100%; /* Forma 1/4 do círculo */
+}
+
+/*MENU*/
+
+.container-artigos{
+    max-width: 1400px;
+    padding: 3%;
+    margin: 0 auto;
+    padding-top: 100px; /* Adiciona espaço no topo */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(0, 0, 0); /* Linha na parte inferior */
+    padding-bottom: 50px; /* Espaço entre o conteúdo e a linha */
+}
+
+nav .logo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.6s;
+    font-family: Outfit;
+}
+
+nav ul li a:hover{
+    color: rgb(102, 7, 7)
+}
+
+
+
+
+
+
+.container-introducao {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: "Outfit", serif;
+   
+}
+
+
+.container-faq {
+    display: flex;
+    
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: "Outfit", serif;
+}
+.mens1{
+    color: #1c1818;
+}
+.faq-session {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-color: #872D2D;
+    font-family: "Outfit";
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+    font-family: "Outfit", serif;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Outfit", serif;
+}
+
+.desc {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #302f2f;
+}
+
+#redirect {
+    color: #e86060; 
+    text-decoration: none; 
+    cursor: pointer; 
+    font-family: "Outfit", serif;
+}
+
+#redirect:hover {
+    color: #ac2929; 
+    text-decoration: underline; 
+}
+
+
+.maisinfo {
+    font-size: 14px;
+    color: #858585;
+    font-family: "Outfit", serif;
+}
+
+/* Seção de Imagem */
+.image-section img {
+    max-width: 700px;
+    height: auto;
+    display: block;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+/* Animação de movimento para cima e para baixo */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+
+
+
+/* Estilos Gerais para o Menu */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(0, 0, 0); 
+    padding-bottom: 50px; 
+}
+
+nav .logo {
+    width: auto; 
+}
+
+nav .logo img {
+    width: 400px; 
+    height: auto; 
+    object-fit: contain; 
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.6s;
+    font-family: Outfit;
+}
+
+nav ul li a:hover {
+    color: rgb(102, 7, 7);
+}
+
+
+
+/* Perguntas e Respostas */
+.faq-container {
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .faq-question {
+    border-radius: 15px;
+    background-color: #1c1818;
+    color: #fff5f5;
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .faq-question:hover {
+    background-color: #a52222;
+  }
+  
+  .faq-question i {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    background-color: #fafafa;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  .faq-answer p {
+    padding: 15px 0;
+    color: #666;
+  }
+  
+  .active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 10px;
+  }
+  
+  .active .faq-question i {
+    transform: rotate(180deg);
+  }
+  
+
+/* Estilo para a seção Relatos de Sucesso */
+
+.gdt-success-stories {
+    margin: 40px 0; /* Aumentei o espaçamento superior e inferior */
+    padding: 40px 20px; /* Aumentei o padding para dar mais respiro */
+    text-align: center;
+    background: linear-gradient(135deg, #9c2a2a, #8e2525); /* Gradiente de cor para um visual mais moderno */
+    font-family: 'Outfit', sans-serif;
+    position: relative; /* Garante que os confetes fiquem sobre a seção */
+    border-radius: 15px; /* Bordas arredondadas para um visual mais suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos de hover */
+    z-index: 2; /* Garante que o container principal fique acima do fundo e imagens */
+}
+
+/* Efeito ao passar o mouse */
+.gdt-success-stories:hover {
+    background: linear-gradient(135deg, #d94343, #9c2a2a); /* Inverte o gradiente ao passar o mouse */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3); /* Sombra mais forte para o efeito de hover */
+}
+
+/* Estilo para o título */
+.gdt-success-stories h2 {
+    margin-bottom: 20px;
+    font-size: 30px; /* Tamanho do título ajustado */
+    font-weight: 700; /* Peso mais forte */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade ao título */
+}
+
+/* Estilo para o texto de introdução */
+.gdt-stories-intro {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #f1f1f1;
+    line-height: 1.8;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para garantir que as imagens de confete fiquem ao lado */
+}
+
+/* Ajuste nas imagens de confete para se destacarem mais e posicionadas corretamente */
+.gdt-confetti-left, .gdt-confetti-right {
+    position: absolute;
+    top: 20px; /* Alinha as imagens um pouco abaixo do topo */
+    width: 80px; /* Ajusta o tamanho das imagens */
+    height: auto;
+    z-index: 1; /* Coloca as imagens de confete atrás do conteúdo */
+    opacity: 0.8; /* Tornando os confetes mais sutis */
+    cursor: pointer; /* Para mostrar que as imagens são interativas */
+    transition: transform 0.2s ease; /* Para uma transição suave ao aplicar a animação */
+}
+
+.gdt-confetti-left {
+    left: 10px; /* Posiciona a imagem de confete à esquerda */
+}
+
+.gdt-confetti-right {
+    right: 10px; /* Posiciona a imagem de confete à direita */
+}
+
+/* Container para o cabeçalho com título e as imagens ao lado */
+.gdt-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Aplica o efeito de tremor ao passar o mouse (hover) */
+.gdt-confetti-left:hover,
+.gdt-confetti-right:hover {
+    animation: gdt-shake 0.5s ease infinite; /* Duração e repetição da animação */
+}
+
+/* Animação de tremor */
+@keyframes gdt-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Container para os confetes */
+.gdt-confetti-container {
+    position: fixed; /* Fixa na tela inteira */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que os confetes não interfiram na interação com a página */
+    z-index: 9999; /* Confetes ficam sobre os outros elementos */
+    overflow: hidden;
+}
+
+/* Estilo para os confetes */
+.gdt-confetti-container .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff5733;
+    animation: fall 2s linear infinite; /* Animação de queda */
+    border-radius: 50%; /* Confetes redondos */
+    pointer-events: none; /* Para que os confetes não interfiram na interação com a página */
+}
+
+/* Animação dos confetes */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Cai até o final da tela */
+        opacity: 0;
+    }
+}
+
+/* Estilo para os confetes na explosão */
+.gdt-confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    animation: gdt-explode 2s linear infinite; /* Definindo a animação de explosão */
+}
+
+/* Efeito de explosão dos confetes */
+@keyframes gdt-explode {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Confete começa na posição inicial */
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg); /* Confete cai pela tela até metade */
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Confete cai até o fundo da tela */
+        opacity: 0;
+    }
+}
+
+
+/* Estilo para as imagens de confete */
+.gdt-confetti-left,
+.gdt-confetti-right {
+    width: 110px;
+    height: auto;
+    cursor: pointer; /* Para mostrar que as imagens são interativas */
+    transition: transform 0.2s ease; /* Para uma transição suave ao aplicar a animação */
+}
+
+/* Animação de tremor */
+@keyframes gdt-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Aplica o efeito de tremor ao passar o mouse (hover) */
+.gdt-confetti-left:hover,
+.gdt-confetti-right:hover {
+    animation: gdt-shake 0.5s ease infinite; /* Duração e repetição da animação */
+}
+
+
+/* Container que segura o slider dos relatos */
+.gdt-stories-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* O slider que contém os relatos */
+.gdt-stories-slider {
+    display: flex;
+    width: 100%; /* Ajustado para garantir que o container se ajuste ao tamanho */
+    transition: transform 1s ease-in-out;
+    animation: gdt-slideStories 18s infinite; /* Animação de deslizar entre os relatos */
+}
+
+/* Cada relato de sucesso */
+.gdt-story {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px; /* Bordas arredondadas para o efeito de card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajustado para 100% para se tornar um card único */
+    max-width: 350px; /* Definindo uma largura máxima para os cards */
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinhamento no início para manter a imagem e o texto no topo */
+    margin: 10px;
+    height: auto;
+    font-family: 'Outfit';
+    transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
+}
+
+.gdt-story:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Foto da pessoa */
+.gdt-person-photo {
+    width: 80px; /* Ajustando a foto para um tamanho de "avatar" */
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover; /* Garante que a imagem ocupe o espaço disponível sem deformar */
+}
+
+/* Texto do relato */
+.gdt-story-text {
+    font-size: 16px;
+    color: #666666;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
+    flex-grow: 1; /* Permite que o texto ocupe o restante do espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o espaço de forma mais uniforme */
+}
+
+/* Animação de transição de histórias */
+@keyframes gdt-slideStories {
+    0% {
+        transform: translateX(0%); /* Exibe os 6 primeiros relatos */
+    }
+    16.66% {
+        transform: translateX(-16.66%);
+    }
+    33.33% {
+        transform: translateX(-33.33%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    66.66% {
+        transform: translateX(-66.66%);
+    }
+    83.33% {
+        transform: translateX(-83.33%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .gdt-stories-slider {
+        flex-direction: column; /* Faz os cards ficarem empilhados em telas menores */
+        align-items: center;
+    }
+
+    .gdt-story {
+        width: 80%; /* Reduz a largura do card para caber melhor em telas pequenas */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gdt-story {
+        width: 90%; /* Reduz ainda mais em dispositivos muito pequenos */
+    }
+}
+
+
+
+.dashboard-redirect {
+    display: flex;
+    flex-direction: column;  /* Organiza os elementos em uma coluna */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.dashboard-redirect h1 {
+    font-size: 24px;
+    color: #350c0c; /* Cor inicial do h1 */
+    font-family: 'Outfit';
+    margin-bottom: 10px; /* Controla o espaço abaixo do h1 */
+    transition: transform 0.3s ease, color 0.3s ease; /* Adiciona transição para elevação e cor */
+}
+
+.dashboard-redirect h1:hover {
+    transform: translateY(-5px); /* Eleva o título */
+    color: #b10f0f; /* Cor alterada ao passar o mouse */
+}
+
+.dashboard-redirect h2 {
+    margin-top: 0; /* Evita que o h3 tenha margem extra no topo */
+    font-family: 'Outfit';
+    color: #350c0c;
+}
+
+.dashboard-redirect a {
+    color: #b10f0f; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+    display: inline-block; /* Necessário para aplicar transform */
+    transition: transform 0.3s ease, text-decoration 0.3s ease; /* Animação suave para elevação e sublinhado */
+}
+
+.dashboard-redirect a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    transform: translateY(-5px); /* Eleva o link */
+}
+
+
+
+/* Estilos para a seção de formulário */
+.gdt-contact-form-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Outfit", serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para transformação e sombra */
+}
+
+/* Efeito de elevação no hover */
+.gdt-contact-form-section:hover {
+    transform: translateY(-10px); /* Eleva o formulário levemente */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar mais profundidade */
+}
+
+/* Estilos para o título do formulário */
+.gdt-form-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Outfit", serif;
+    color: #1c1818;
+}
+
+/* Estilos para os grupos de campos do formulário */
+.gdt-form-group {
+    margin-bottom: 15px;
+    font-family: "Outfit", serif;
+}
+
+/* Estilos para os rótulos dos campos */
+.gdt-form-label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Outfit", serif;
+}
+
+/* Estilos para os campos de entrada */
+.gdt-form-input,
+.gdt-form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "Outfit", serif;
+}
+
+/* Estilos para o campo de entrada de texto (input) */
+.gdt-form-input {
+    height: 35px;
+}
+
+/* Estilos para o campo de texto (textarea) */
+.gdt-form-textarea {
+    height: 100px;
+    resize: none;
+    font-family: "Outfit", serif;
+}
+
+/* Estilos para o botão de envio */
+.gdt-submit-btn {
+    background-color: #c13737;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilos para o botão de envio ao passar o mouse */
+.gdt-submit-btn:hover {
+    background-color: #a11e09;
+}
+
+/* Estilos para o botão de envio quando pressionado */
+.gdt-submit-btn:active {
+    background-color: #7a0e0e;
+}
+
+/* Estilos para o pop-up */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Inicialmente escondido */
+    font-family: "Outfit", serif;
+}
+
+.popup h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    font-family: "Outfit", serif;
+}
+
+.popup p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 15px;
+    font-family: "Outfit", serif;
+}
+
+.popup button {
+    background-color: #c13737;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Outfit", serif;
+}
+
+.popup button:hover {
+    background-color: #a11e09;
+}
+
+/* Overlay para escurecer o fundo */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; /* Inicialmente escondido */
+}
+
+
+
+/* Rodapé */
+footer {
+    background-color: #10364D;
+    color: white;
+    padding: 20px 0;
+    font-family: "Outfit", serif;
+    margin-top: 50px; /* Adiciona espaço extra acima do rodapé */
+}
+
+/* Seção do formulário ou conteúdo acima do rodapé */
+.gdt-contact-form-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px; /* Aumenta a margem inferior para criar mais espaço acima do rodapé */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Outfit", serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajuste na margem do rodapé */
+.container {
+    padding-bottom: 100px; /* Já está aplicando um espaçamento adicional */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.siga-nos, .suporte, .sobre-nos {
+    flex: 1;
+    padding: 0 20px;
+}
+
+
+.siga-nos h3, .suporte h3, .sobre-nos h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+ul li {
+    margin: 5px 0;
+}
+
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+
+
+.copyright {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    font-family: "Outfit", serif;
+}

@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+.container-artigos{
+    max-width: 1400px;
+    padding: 3%;
+    margin: 0 auto;
+    padding-top: 100px; /* Adiciona espaço no topo */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(0, 0, 0); /* Linha na parte inferior */
+    padding-bottom: 50px; /* Espaço entre o conteúdo e a linha */
+}
+
+nav .logo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.6s;
+    font-family: Outfit;
+}
+
+nav ul li a:hover{
+    color: rgb(102, 7, 7)
+}
+
+
+
+
+
+
+.container-introducao {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: "Outfit", serif;
+   
+}
+
+
+.container-faq {
+    display: flex;
+    
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: "Outfit", serif;
+}
+.mens1{
+    color: #1c1818;
+}
+.faq-session {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-color: #872D2D;
+    font-family: "Outfit";
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+    font-family: "Outfit", serif;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Outfit", serif;
+}
+
+.desc {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #302f2f;
+}
+
+#redirect {
+    color: #e86060; 
+    text-decoration: none; 
+    cursor: pointer; 
+    font-family: "Outfit", serif;
+}
+
+#redirect:hover {
+    color: #ac2929; 
+    text-decoration: underline; 
+}
+
+
+.maisinfo {
+    font-size: 14px;
+    color: #858585;
+    font-family: "Outfit", serif;
+}
+
+/* Seção de Imagem */
+.image-section img {
+    max-width: 700px;
+    height: auto;
+    display: block;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+/* Animação de movimento para cima e para baixo */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+
+/* Estilos Gerais para o Menu */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(0, 0, 0); 
+    padding-bottom: 50px; 
+}
+
+nav .logo {
+    width: auto; 
+}
+
+nav .logo img {
+    width: 400px; 
+    height: auto; 
+    object-fit: contain; 
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.6s;
+    font-family: Outfit;
+}
+
+nav ul li a:hover {
+    color: rgb(102, 7, 7);
+}
+
+
+/*Animação de escrita*/
+
+/* Global */
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(114, 3, 3, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    font-family: 'Outfit';
+    text-shadow: 5px #000000;  /* Sombra inicial no texto */
+    transition: color 0.3s ease, text-shadow 0.3s ease;  /* Transição suave */
+}
+
+/* Adiciona efeitos de hover */
+.line-1:hover {
+    color: #96240a;  /* Cor que o texto vai mudar ao passar o mouse */
+}
+
+.line-2 {
+    font-family: 'Outfit';
+    text-align: center;
+    transition: color 0.3s ease;
+    color: #872D2D;
+}
+
+.line-2:hover {
+    color: #000000;  /* Cor do texto no hover */
+
+}
+
+
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(136, 0, 0, 0.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+
+/* Container principal do dashboard */
+.dashboard-container {
+    display: grid; /* Usando CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de largura igual */
+    grid-gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Para garantir que os gráficos fiquem responsivos e ocupem o máximo de espaço possível */
+.highcharts-figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsividade - em telas pequenas, 1 gráfico por linha */
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+}
+
+/* Descrição do gráfico */
+.highcharts-description {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+/* pop up containers charts */
+
+/* Container do Dashboard */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Isso coloca os gráficos em duas colunas */
+}
+
+/* Contêiner dos gráficos */
+.chart-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 48%; /* Cada gráfico vai ocupar 48% da largura do contêiner */
+    min-width: 300px; /* Garantir um tamanho mínimo */
+    margin: 0 auto;
+}
+
+/* Efeito hover: Pop-up e sombra */
+.chart-container:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do gráfico */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Aplica uma sombra */
+}
+
+/* Estilos do gráfico */
+.highcharts-figure {
+    width: 100%;
+    margin: 0;
+}
+
+/* Descrição do gráfico */
+.highcharts-description {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsividade: Em telas pequenas, os gráficos ocupam 100% da largura */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%; /* Faz com que os gráficos ocupem 100% da largura em telas menores */
+    }
+}
+
+
+/* Estilo do ícone de informações */
+.info-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-left: 5px;
+}
+
+.info-icon:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Estilo geral para os pop-ups */
+.popup {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1000; /* Coloca o pop-up acima de outros elementos */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta o tamanho dos pop-ups */
+    max-width: 600px; /* Limita o tamanho máximo */
+    background-color: white;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse as bordas */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Fundo geral da página com desfoque */
+body.blur-background {
+    filter: blur(5px); /* Aplica o desfoque no fundo */
+    transition: filter 0.3s ease;
+}
+
+/* Quando o pop-up estiver visível */
+.popup.show {
+    display: block; /* Torna o pop-up visível */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Estilo do conteúdo do pop-up */
+.popup-content {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    max-height: 80vh;
+    overflow-y: auto; /* Permite a rolagem do conteúdo */
+    font-family: 'Outfit';
+}
+
+/* Estilo para os títulos dentro do pop-up */
+.popup-content h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Estilo para os parágrafos */
+.popup-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Estilo do botão de fechar */
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efeito do botão de fechar */
+.popup .close:hover {
+    color: #e74c3c; /* Cor vermelha ao passar o mouse */
+}
+
+/* Estilo para tornar o conteúdo rolável */
+.popup-content.scrollable-content {
+    max-height: 400px; /* Define o limite máximo de altura */
+    overflow-y: auto; /* Permite rolagem */
+    padding-right: 10px; /* Adiciona espaço para a barra de rolagem */
+}
+
+
+
+
+/* Rodapé */
+footer {
+    background-color: #10364D;
+    color: white;
+    width:100vw;
+    padding:  0;
+    font-family: "Outfit", serif;
+    margin-top: 50px; /* Adiciona espaço extra acima do rodapé */
+}
+
+/* Seção do formulário ou conteúdo acima do rodapé */
+.gdt-contact-form-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px; /* Aumenta a margem inferior para criar mais espaço acima do rodapé */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Outfit", serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajuste na margem do rodapé */
+.container {
+    padding-bottom: 100px; /* Já está aplicando um espaçamento adicional */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.siga-nos, .suporte, .sobre-nos {
+    flex: 1;
+    padding: 0 20px;
+}
+
+
+.siga-nos h3, .suporte h3, .sobre-nos h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+ul li {
+    margin: 5px 0;
+}
+
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+
+
+.copyright {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    font-family: "Outfit", serif;
+}

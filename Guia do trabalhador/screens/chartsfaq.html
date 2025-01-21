@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GDT Dashboard</title>
+    <link rel="stylesheet" href="/styles/chartsfaq.css">
+    <link rel="stylesheet" href="/carregamento/styles-carregamento/carregamento.css"> <!--CSS CARREGAMENTO-->
+
+
+    <header>
+
+        <!-- Menu -->
+        <div class="container-artigos">
+  
+          <nav>
+              <div class="logo">
+                  <img src="/images/logo-artigos.png" alt="logo" class="logo-artigos">
+              </div>
+              <ul>
+                <li><a href="/screens/home.html">Home</a></li>
+                <li><a href="/screens/artigos.html">Artigos</a></li>
+                <li><a href="/screens/indexfaq.html">FAQ</a></li>
+                <li><a href="/screens/home.html#sobrenos">Sobre Nós</a></li>
+            </ul>
+          </nav>
+      </div>
+      </header>
+  
+</head>
+
+
+<body>
+    
+    <div class="text-container">
+        <p class="line-1 anim-typewriter">DASHBOARD Guia Do Trabalhador</p>
+        <p class="line-2">Confira as principais estatísticas a respeito do trabalho no Brasil:</p>
+    </div>
+    
+
+
+<!-- Incluindo as bibliotecas Highcharts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!-- Container do Dashboard -->
+<div class="dashboard-container">
+<!-- Chart 1 -->
+<div class="chart-container">
+    <figure class="highcharts-figure">
+        <div id="container1"></div>
+        <p class="highcharts-description">
+            Os dados deste gráfico foram retirados da revistacipa e GOV-BR.
+            <img src="/images/maisinfo.png" class="info-icon" data-target="popup1" alt="Mais informações">
+        </p>
+    </figure>
+</div>
+
+<!-- Chart 2 -->
+<div class="chart-container">
+    <figure class="highcharts-figure">
+        <div id="container2"></div>
+        <p class="highcharts-description">
+            Clique para mais informações
+            <img src="/images/maisinfo.png" class="info-icon" data-target="popup2" alt="Mais informações">
+        </p>
+    </figure>
+</div>
+
+<!-- Chart 3 -->
+<div class="chart-container">
+    <figure class="highcharts-figure">
+        <div id="container3"></div>
+        <p class="highcharts-description">
+            Clique para mais informações
+            <img src="/images/maisinfo.png" class="info-icon" data-target="popup3" alt="Mais informações">
+        </p>
+    </figure>
+</div>
+
+<!-- Chart 4 -->
+<div class="chart-container">
+    <figure class="highcharts-figure">
+        <div id="container4"></div>
+        <p class="highcharts-description">
+            Clique para mais informações
+            <img src="/images/maisinfo.png" class="info-icon" data-target="popup4" alt="Mais informações">
+        </p>
+    </figure>
+</div>
+
+
+<!-- Pop-ups -->
+
+<!-- Fundo Escurecido (Overlay) -->
+<div id="popup-overlay" class="popup-overlay"></div>
+
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Informações do Gráfico 1</h2>
+        <p>Distribuição de acidentes por setores, dados da Revistacipa e GOV-BR.</p>
+        <h3>Análise Estatística:</h3>
+        <ul>
+            <li><strong>Média:</strong> Aproximadamente 62.729 acidentes.</li>
+            <li><strong>Mediana:</strong> Aproximadamente 52.879,5 acidentes.</li>
+            <li><strong>Desvio Padrão:</strong> Aproximadamente 23.475 acidentes, indicando uma ampla dispersão dos dados.</li>
+            <li><strong>Quartis:</strong>
+                <ul>
+                    <li>Q1 (25% dos dados abaixo): 44.537 acidentes.</li>
+                    <li>Q3 (75% dos dados abaixo): 76.181,5 acidentes.</li>
+                </ul>
+            </li>
+            <li><strong>Distribuição Percentual:</strong>
+                <ul>
+                    <li>Saúde e Serviços Sociais: 25,5%</li>
+                    <li>Comércio e Reparação de Serviços Automotores: 24,8%</li>
+                    <li>Serviços Prestados Principalmente a Empresas: 15,7%</li>
+                    <li>Produtos Alimentícios e Bebidas: 12,4%</li>
+                    <li>Construção: 11,3%</li>
+                    <li>Transporte, Armazenagem e Correios: 10,3%</li>
+                </ul>
+            </li>
+            <li><strong>Coeficiente de Variação (CV):</strong> 37,4%, indicando uma considerável variação entre os setores.</li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="popup2" class="popup">
+    <div class="popup-content scrollable-content">
+        <span class="close">&times;</span>
+        <h2>Informações do Gráfico 2</h2>
+        <p>Benefícios previdenciários relacionados a acidentes de trabalho, analisados entre 2021 e 2024.</p>
+        
+        <h3>Resumo Estatístico</h3>
+        <ul>
+            <li><strong>Média Anual (2021-2024):</strong></li>
+            <ul>
+                <li>Auxílio-doença (B91): 295.000 benefícios/ano</li>
+                <li>Aposentadoria por Invalidez (B92): 39.750 benefícios/ano</li>
+                <li>Pensão por Morte (B93): 20.200 benefícios/ano</li>
+                <li>Auxílio-acidente (B94): 147.500 benefícios/ano</li>
+            </ul>
+
+            <li><strong>Crescimento Médio Anual:</strong></li>
+            <ul>
+                <li>Auxílio-doença (B91): 10.000 benefícios/ano</li>
+                <li>Aposentadoria por Invalidez (B92): 1.333 benefícios/ano</li>
+                <li>Pensão por Morte (B93): 667 benefícios/ano</li>
+                <li>Auxílio-acidente (B94): 5.000 benefícios/ano</li>
+            </ul>
+
+            <li><strong>Distribuição Percentual dos Benefícios em 2023:</strong></li>
+            <ul>
+                <li>Auxílio-doença (B91): 58,8%</li>
+                <li>Aposentadoria por Invalidez (B92): 7,8%</li>
+                <li>Pensão por Morte (B93): 3,9%</li>
+                <li>Auxílio-acidente (B94): 29,4%</li>
+            </ul>
+        </ul>
+
+        <h3>Análise de Quartis</h3>
+        <ul>
+            <li><strong>Auxílio-doença (B91):</strong></li>
+            <ul>
+                <li>1º Quartil (25%): 290.000 benefícios (2022).</li>
+                <li>Mediana (50%): 295.000 benefícios (média de 2021-2024).</li>
+                <li>3º Quartil (75%): 300.000 benefícios (2023).</li>
+            </ul>
+
+            <li><strong>Aposentadoria por Invalidez (B92):</strong></li>
+            <ul>
+                <li>1º Quartil (25%): 39.000 benefícios (2022).</li>
+                <li>Mediana (50%): 39.750 benefícios (média de 2021-2024).</li>
+                <li>3º Quartil (75%): 40.000 benefícios (2023).</li>
+            </ul>
+
+            <li><strong>Pensão por Morte (B93):</strong></li>
+            <ul>
+                <li>1º Quartil (25%): 19.800 benefícios (2022).</li>
+                <li>Mediana (50%): 20.200 benefícios (média de 2021-2024).</li>
+                <li>3º Quartil (75%): 20.000 benefícios (2023).</li>
+            </ul>
+
+            <li><strong>Auxílio-acidente (B94):</strong></li>
+            <ul>
+                <li>1º Quartil (25%): 145.000 benefícios (2022).</li>
+                <li>Mediana (50%): 147.500 benefícios (média de 2021-2024).</li>
+                <li>3º Quartil (75%): 150.000 benefícios (2023).</li>
+            </ul>
+        </ul>
+
+        
+    </div>
+</div>
+
+
+
+
+<div id="popup3" class="popup">
+    <div class="popup-content scrollable-content">
+        <span class="close">&times;</span>
+        <h2>Informações do Gráfico 3</h2>
+        <p>A distribuição de acidentes de trabalho no Brasil foi analisada com base nos dados de 2000 a 2013, destacando diferentes tipos de acidentes, sua incidência por região e estatísticas descritivas.</p>
+        
+        <h3>Distribuição por Tipo de Acidente</h3>
+        <ul>
+            <li><strong>Acidentes Típicos:</strong> 62,4%</li>
+            <li><strong>Acidentes de Trajeto:</strong> 12,3%</li>
+            <li><strong>Doenças Relacionadas ao Trabalho:</strong> 4,6%</li>
+        </ul>
+
+        <h3>Estatísticas Descritivas</h3>
+        <h4>Acidentes Típicos</h4>
+        <ul>
+            <li><strong>Média:</strong> 1.378 acidentes por 10.000 trabalhadores</li>
+            <li><strong>Mediana:</strong> 1.130 acidentes por 10.000 trabalhadores</li>
+            <li><strong>Quartis:</strong></li>
+            <ul>
+                <li>1º Quartil (Q1): 530</li>
+                <li>2º Quartil (Mediana/Q2): 1.130</li>
+                <li>3º Quartil (Q3): 2.150</li>
+            </ul>
+        </ul>
+
+        <h4>Acidentes de Trajeto</h4>
+        <ul>
+            <li><strong>Média:</strong> 250 acidentes por 10.000 trabalhadores</li>
+            <li><strong>Mediana:</strong> 200 acidentes por 10.000 trabalhadores</li>
+            <li><strong>Quartis:</strong></li>
+            <ul>
+                <li>1º Quartil (Q1): 120</li>
+                <li>2º Quartil (Mediana/Q2): 200</li>
+                <li>3º Quartil (Q3): 450</li>
+            </ul>
+        </ul>
+
+        <h4>Doenças Relacionadas ao Trabalho</h4>
+        <ul>
+            <li><strong>Média:</strong> 96 acidentes por 10.000 trabalhadores</li>
+            <li><strong>Mediana:</strong> 80 acidentes por 10.000 trabalhadores</li>
+            <li><strong>Quartis:</strong></li>
+            <ul>
+                <li>1º Quartil (Q1): 50</li>
+                <li>2º Quartil (Mediana/Q2): 80</li>
+                <li>3º Quartil (Q3): 190</li>
+            </ul>
+        </ul>
+
+        <h3>Análise Geográfica</h3>
+        <p>Os estados do Espírito Santo e Ceará apresentaram as maiores taxas de acidentes de trabalho registrados no período (2000-2013), com valores entre <strong>530</strong> e <strong>2.515</strong> por 10.000 trabalhadores. A região Nordeste liderou nos acidentes típicos, enquanto o Sudeste apresentou maior equilíbrio entre os tipos de acidentes.</p>
+
+        <h3>Resumo Regional</h3>
+        <ul>
+            <li><strong>Norte:</strong></li>
+            <ul>
+                <li>Acidentes Típicos: 530</li>
+                <li>Acidentes de Trajeto: 120</li>
+                <li>Doenças Relacionadas ao Trabalho: 50</li>
+            </ul>
+            <li><strong>Nordeste:</strong></li>
+            <ul>
+                <li>Acidentes Típicos: 2.150</li>
+                <li>Acidentes de Trajeto: 450</li>
+                <li>Doenças Relacionadas ao Trabalho: 190</li>
+            </ul>
+            <li><strong>Sul:</strong></li>
+            <ul>
+                <li>Acidentes Típicos: 1.130</li>
+                <li>Acidentes de Trajeto: 200</li>
+                <li>Doenças Relacionadas ao Trabalho: 80</li>
+            </ul>
+            <li><strong>Sudeste:</strong></li>
+            <ul>
+                <li>Acidentes Típicos: 1.200</li>
+                <li>Acidentes de Trajeto: 300</li>
+                <li>Doenças Relacionadas ao Trabalho: 100</li>
+            </ul>
+            <li><strong>Centro-Oeste:</strong></li>
+            <ul>
+                <li>Acidentes Típicos: 880</li>
+                <li>Acidentes de Trajeto: 180</li>
+                <li>Doenças Relacionadas ao Trabalho: 60</li>
+            </ul>
+        </ul>
+    </div>
+</div>
+
+
+<div id="popup4" class="popup">
+    <div class="popup-content scrollable-content">
+        <span class="close">&times;</span>
+        <h2>Informações do Gráfico 4</h2>
+        <p>A taxa de incidência de acidentes de trabalho por 100.000 trabalhadores reflete a frequência de acidentes em diferentes setores da economia ao longo de um período de 2021 a 2024.</p>
+        
+        <h3>Dados Recentes e Tendências</h3>
+        <ul>
+            <li><strong>2021:</strong> 300 acidentes/100.000 trabalhadores (aumento após a pandemia e baixa fiscalização).</li>
+            <li><strong>2022:</strong> 280 acidentes/100.000 trabalhadores (redução com maior fiscalização e programas de prevenção).</li>
+            <li><strong>2023:</strong> 290 acidentes/100.000 trabalhadores (aumento devido ao aquecimento da economia em setores de alto risco).</li>
+            <li><strong>2024:</strong> 270 acidentes/100.000 trabalhadores (redução devido a investimentos em segurança e campanhas educativas).</li>
+        </ul>
+
+        <h3>Estatísticas Descritivas (Média, Mediana, Quartis)</h3>
+        <h4>Média Nacional</h4>
+        <ul>
+            <li><strong>Média:</strong> 285 acidentes por 100.000 trabalhadores</li>
+            <li><strong>Mediana:</strong> 285 acidentes por 100.000 trabalhadores</li>
+            <li><strong>Quartis:</strong></li>
+            <ul>
+                <li>1º Quartil (Q1): 280</li>
+                <li>2º Quartil (Mediana/Q2): 285</li>
+                <li>3º Quartil (Q3): 290</li>
+            </ul>
+        </ul>
+
+        <h4>Setor por Setor</h4>
+        <ul>
+            <li><strong>Construção Civil</strong>
+                <ul>
+                    <li><strong>Média:</strong> 608 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Mediana:</strong> 605 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Quartis:</strong></li>
+                    <ul>
+                        <li>1º Quartil (Q1): 590</li>
+                        <li>2º Quartil (Mediana/Q2): 605</li>
+                        <li>3º Quartil (Q3): 620</li>
+                    </ul>
+                </ul>
+            </li>
+            <li><strong>Indústria Naval</strong>
+                <ul>
+                    <li><strong>Média:</strong> 458 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Mediana:</strong> 460 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Quartis:</strong></li>
+                    <ul>
+                        <li>1º Quartil (Q1): 455</li>
+                        <li>2º Quartil (Mediana/Q2): 460</li>
+                        <li>3º Quartil (Q3): 470</li>
+                    </ul>
+                </ul>
+            </li>
+            <li><strong>Setor Agrícola</strong>
+                <ul>
+                    <li><strong>Média:</strong> 355 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Mediana:</strong> 350 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Quartis:</strong></li>
+                    <ul>
+                        <li>1º Quartil (Q1): 340</li>
+                        <li>2º Quartil (Mediana/Q2): 350</li>
+                        <li>3º Quartil (Q3): 360</li>
+                    </ul>
+                </ul>
+            </li>
+            <li><strong>Setor de Serviços</strong>
+                <ul>
+                    <li><strong>Média:</strong> 165 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Mediana:</strong> 165 acidentes por 100.000 trabalhadores</li>
+                    <li><strong>Quartis:</strong></li>
+                    <ul>
+                        <li>1º Quartil (Q1): 150</li>
+                        <li>2º Quartil (Mediana/Q2): 160</li>
+                        <li>3º Quartil (Q3): 170</li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Análise de Tendência por Setor</h3>
+        <ul>
+            <li><strong>Construção Civil:</strong> Setor com maior taxa de acidentes, mantendo-se alto devido à periculosidade das atividades.</li>
+            <li><strong>Indústria Naval:</strong> Leve redução ao longo dos anos, atribuída à adoção de tecnologias mais seguras.</li>
+            <li><strong>Setor Agrícola:</strong> Taxa ainda alta devido a condições de trabalho com maquinário pesado e produtos químicos.</li>
+            <li><strong>Setor de Serviços:</strong> O setor com menor taxa, refletindo menor exposição a riscos físicos.</li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+
+<footer style="background-color: #10364D; padding: 20px 0; color: white;">
+    <div class="container">
+        <!-- Seção Siga-nos -->
+        <div class="siga-nos">     
+            <h3>Siga-nos</h3>
+            <ul>
+                <li><a href="#">Insta <img src="/images/instagram.png" alt="Instagram" class="social-logo"></a></li>
+                <li><a href="#">Twitter <img src="/images/twitter.png" alt="Twitter" class="social-logo"></a></li>
+                <li><a href="#">Facebook <img src="/images/facebook.png" alt="Facebook" class="social-logo"></a></li>
+            </ul>
+        </div>
+
+        <!-- Seção Suporte -->
+        <div class="suporte">
+            <h3>Suporte</h3>
+            <ul>
+                <li><a href="#">Atendimento individual</a></li>
+                <li><a href="#">O que é o GDT</a></li>
+            </ul>
+        </div>
+
+        <!-- Seção Sobre Nós -->
+        <div class="sobre-nos">
+            <h3>Sobre Nós</h3>
+            <ul>
+                <li><a href="#">Nome da empresa</a></li>
+                <li><a href="#">Nossos outros projetos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Linha de Divisão -->
+    <hr style="border: 1px solid white; margin: 20px 0;">
+
+    <!-- Direitos Autorais -->
+    <div class="copyright">
+        <p>@2024, All rights reserved</p>
+    </div>
+</footer>
+
+
+<script src="/carregamento/scripts-carregamento/carregamento.js" ></script> <!--JS DO CARREGAMENTO-->
+<script src="/js/chartsfaq.js"></script>
+
+
+</body>
+</html>
+
+
+
